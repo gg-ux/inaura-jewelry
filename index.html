@@ -86,52 +86,54 @@
         </div>
     </div>
 
-    <!-- Hero Section - Logo Banner -->
+    <!-- Hero Section - Editorial Banner -->
     <header class="hero-banner">
-        <a href="#" class="hero-logo">
-            <span class="hero-brand-text">Inaura</span>
-            <img src="images/inaura-logo.svg" alt="" class="hero-logo-img">
-            <span class="hero-brand-text">Jewelry</span>
-        </a>
+        <img src="images/banner2.png" alt="Inaura Jewelry" class="hero-image">
     </header>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <p class="about-text">
-                Jewelry made to be effortlessly lived in. Waterproof stainless steel
-                meets genuine gemstones—each piece one-of-a-kind, blending minimalist
-                elegance with industrial edge. Made to endure, designed to illuminate.
-            </p>
-            <a href="about.html" class="about-link">Read Our Story</a>
-        </div>
-    </section>
 
     <!-- Marquee Bar -->
     <div class="marquee-bar">
         <div class="marquee-track">
             <div class="marquee-content">
-                <span>WATERPROOF</span>
-                <span class="star">✦</span>
-                <span>HYPOALLERGENIC</span>
-                <span class="star">✦</span>
-                <span>ONE-OF-A-KIND</span>
+                <span>FORGED IN STEEL</span>
                 <span class="star">✦</span>
                 <span>NATURAL GEMSTONES</span>
                 <span class="star">✦</span>
-                <span>EVERYDAY WEAR</span>
+                <span>WATERPROOF</span>
+                <span class="star">✦</span>
+                <span>SKIN-KIND</span>
+                <span class="star">✦</span>
+                <span>ARTISAN CRAFTED</span>
+                <span class="star">✦</span>
+                <span>WEAR IT FOREVER</span>
                 <span class="star">✦</span>
             </div>
             <div class="marquee-content">
-                <span>WATERPROOF</span>
-                <span class="star">✦</span>
-                <span>HYPOALLERGENIC</span>
-                <span class="star">✦</span>
-                <span>ONE-OF-A-KIND</span>
+                <span>FORGED IN STEEL</span>
                 <span class="star">✦</span>
                 <span>NATURAL GEMSTONES</span>
                 <span class="star">✦</span>
-                <span>EVERYDAY WEAR</span>
+                <span>WATERPROOF</span>
+                <span class="star">✦</span>
+                <span>SKIN-KIND</span>
+                <span class="star">✦</span>
+                <span>ARTISAN CRAFTED</span>
+                <span class="star">✦</span>
+                <span>WEAR IT FOREVER</span>
+                <span class="star">✦</span>
+            </div>
+            <div class="marquee-content">
+                <span>FORGED IN STEEL</span>
+                <span class="star">✦</span>
+                <span>NATURAL GEMSTONES</span>
+                <span class="star">✦</span>
+                <span>WATERPROOF</span>
+                <span class="star">✦</span>
+                <span>SKIN-KIND</span>
+                <span class="star">✦</span>
+                <span>ARTISAN CRAFTED</span>
+                <span class="star">✦</span>
+                <span>WEAR IT FOREVER</span>
                 <span class="star">✦</span>
             </div>
         </div>
@@ -149,6 +151,18 @@
                     View All on Etsy
                 </a>
             </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <p class="about-text">
+                Jewelry made to be effortlessly lived in. Waterproof stainless steel
+                meets genuine gemstones—each piece one-of-a-kind, blending minimalist
+                elegance with industrial edge. Made to endure, designed to illuminate.
+            </p>
+            <a href="about.html" class="about-link">Read Our Story</a>
         </div>
     </section>
 
@@ -175,12 +189,11 @@
     <script src="js/products.js"></script>
     <script src="js/cart.js"></script>
     <script>
-        // Show nav logo after scrolling past hero banner
+        // Add scrolled class to nav for border on scroll
         const nav = document.querySelector('.nav');
-        const heroBanner = document.querySelector('.hero-banner');
 
         window.addEventListener('scroll', () => {
-            if (window.scrollY > heroBanner.offsetHeight - 60) {
+            if (window.scrollY > 10) {
                 nav.classList.add('scrolled');
             } else {
                 nav.classList.remove('scrolled');
