@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inaura Jewelry | Handcrafted Stainless Steel & Gemstone Jewelry</title>
+    <meta name="description" content="Waterproof handcrafted jewelry in stainless steel and natural gemstones. Pearls, opals, and raw stones meet industrial minimalism. Adorn your shadow self.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Grain overlay for subtle grunge texture -->
+    <div class="grain"></div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-left">
+            <ul class="nav-links">
+                <li><a href="https://www.etsy.com/shop/inaurajewelry" target="_blank" rel="noopener">Etsy</a></li>
+                <li><a href="https://instagram.com/inaurajewelry" target="_blank" rel="noopener">Instagram</a></li>
+            </ul>
+        </div>
+        <a href="#" class="nav-logo">
+            <span class="nav-brand-text">Inaura</span>
+            <img src="images/inaura-logo.svg" alt="" class="nav-logo-img">
+            <span class="nav-brand-text">Jewelry</span>
+        </a>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="#shop">Shop</a></li>
+            </ul>
+            <button class="nav-cart" aria-label="Shopping cart">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M6 6h15l-1.5 9h-12z"/>
+                    <circle cx="9" cy="20" r="1.5"/>
+                    <circle cx="18" cy="20" r="1.5"/>
+                    <path d="M6 6L5 3H2"/>
+                </svg>
+                <span class="cart-count">0</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay"></div>
+
+    <!-- Cart Drawer -->
+    <div class="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="cart-close" aria-label="Close cart">&times;</button>
+        </div>
+
+        <div class="cart-empty">
+            <p>Your cart is empty</p>
+            <a href="#shop" class="btn-secondary cart-continue">Continue Shopping</a>
+        </div>
+
+        <div class="cart-content" style="display: none;">
+            <div class="cart-items"></div>
+
+            <div class="cart-summary">
+                <div class="cart-row">
+                    <span>Subtotal</span>
+                    <span class="cart-subtotal-amount">$0.00</span>
+                </div>
+                <div class="cart-row">
+                    <span>Shipping</span>
+                    <span class="cart-shipping-amount">$5.00</span>
+                </div>
+                <div class="cart-row cart-total">
+                    <span>Total</span>
+                    <span class="cart-total-amount">$0.00</span>
+                </div>
+            </div>
+
+            <div class="cart-actions">
+                <a href="https://www.etsy.com/shop/inaurajewelry" target="_blank" rel="noopener" class="cart-checkout-btn">
+                    Checkout on Etsy
+                </a>
+                <p class="cart-checkout-note">Native checkout coming soon</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section - Logo Banner -->
+    <header class="hero-banner">
+        <a href="#" class="hero-logo">
+            <span class="hero-brand-text">Inaura</span>
+            <img src="images/inaura-logo.svg" alt="" class="hero-logo-img">
+            <span class="hero-brand-text">Jewelry</span>
+        </a>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <p class="about-text">
+                Jewelry made to be effortlessly lived in. Waterproof stainless steel
+                meets genuine gemstones—each piece one-of-a-kind, blending minimalist
+                elegance with industrial edge. Made to endure, designed to illuminate.
+            </p>
+            <a href="about.html" class="about-link">Read Our Story</a>
+        </div>
+    </section>
+
+    <!-- Marquee Bar -->
+    <div class="marquee-bar">
+        <div class="marquee-track">
+            <div class="marquee-content">
+                <span>WATERPROOF</span>
+                <span class="star">✦</span>
+                <span>HYPOALLERGENIC</span>
+                <span class="star">✦</span>
+                <span>ONE-OF-A-KIND</span>
+                <span class="star">✦</span>
+                <span>NATURAL GEMSTONES</span>
+                <span class="star">✦</span>
+                <span>EVERYDAY WEAR</span>
+                <span class="star">✦</span>
+            </div>
+            <div class="marquee-content">
+                <span>WATERPROOF</span>
+                <span class="star">✦</span>
+                <span>HYPOALLERGENIC</span>
+                <span class="star">✦</span>
+                <span>ONE-OF-A-KIND</span>
+                <span class="star">✦</span>
+                <span>NATURAL GEMSTONES</span>
+                <span class="star">✦</span>
+                <span>EVERYDAY WEAR</span>
+                <span class="star">✦</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shop Section -->
+    <section id="shop" class="shop">
+        <div class="container">
+            <div class="product-grid" id="product-grid">
+                <!-- Products rendered by JavaScript -->
+            </div>
+
+            <div class="shop-footer">
+                <a href="https://www.etsy.com/shop/inaurajewelry" target="_blank" rel="noopener" class="btn-secondary">
+                    View All on Etsy
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-text">Inaura</span>
+                    <p class="footer-tagline">Handcrafted with intention</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.etsy.com/shop/inaurajewelry" target="_blank" rel="noopener">Etsy Shop</a>
+                    <a href="https://instagram.com/inaurajewelry" target="_blank" rel="noopener">Instagram</a>
+                    <a href="mailto:your@email.com">Contact</a>
+                </div>
+            </div>
+            <p class="footer-copyright">&copy; 2026 Inaura Jewelry. All rights reserved.</p>
+            <p class="footer-legal">The term 'Etsy' is a trademark of Etsy, Inc. This site uses the Etsy API but is not endorsed or certified by Etsy, Inc.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script>
+        // Show nav logo after scrolling past hero banner
+        const nav = document.querySelector('.nav');
+        const heroBanner = document.querySelector('.hero-banner');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > heroBanner.offsetHeight - 60) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

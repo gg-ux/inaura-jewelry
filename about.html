@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Inaura Jewelry</title>
+    <meta name="description" content="The story behind Inaura Jewelry. Waterproof stainless steel meets natural gemstones—jewelry made to be effortlessly lived in.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav scrolled">
+        <div class="nav-left">
+            <ul class="nav-links">
+                <li><a href="index.html#shop">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+        <a href="index.html" class="nav-logo">
+            <span class="nav-brand-text">Inaura</span>
+            <img src="images/inaura-logo.svg" alt="" class="nav-logo-img">
+            <span class="nav-brand-text">Jewelry</span>
+        </a>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="https://www.etsy.com/shop/inaurajewelry" target="_blank" rel="noopener">Etsy</a></li>
+                <li><a href="https://instagram.com/inaurajewelry" target="_blank" rel="noopener">Instagram</a></li>
+            </ul>
+            <button class="nav-cart" aria-label="Shopping cart">
+                Cart (<span class="cart-count">0</span>)
+            </button>
+        </div>
+    </nav>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay"></div>
+
+    <!-- Cart Drawer -->
+    <div class="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="cart-close" aria-label="Close cart">&times;</button>
+        </div>
+
+        <div class="cart-empty">
+            <p>Your cart is empty</p>
+            <a href="index.html#shop" class="btn-secondary cart-continue">Continue Shopping</a>
+        </div>
+
+        <div class="cart-content" style="display: none;">
+            <div class="cart-items"></div>
+
+            <div class="cart-summary">
+                <div class="cart-row">
+                    <span>Subtotal</span>
+                    <span class="cart-subtotal-amount">$0.00</span>
+                </div>
+                <div class="cart-row">
+                    <span>Shipping</span>
+                    <span class="cart-shipping-amount">$5.00</span>
+                </div>
+                <div class="cart-row cart-total">
+                    <span>Total</span>
+                    <span class="cart-total-amount">$0.00</span>
+                </div>
+            </div>
+
+            <div class="cart-actions">
+                <a href="https://www.etsy.com/shop/inaurajewelry" target="_blank" rel="noopener" class="cart-checkout-btn">
+                    Checkout on Etsy
+                </a>
+                <p class="cart-checkout-note">Native checkout coming soon</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Content -->
+    <main class="about-page">
+        <div class="about-hero">
+            <h1 class="about-page-title">The Story</h1>
+        </div>
+
+        <div class="about-content">
+            <section class="about-section">
+                <div class="about-section-header">
+                    <span class="about-section-tags">waterproof ✦ non-tarnishing ✦ durable</span>
+                    <h2>Lasting Quality</h2>
+                </div>
+                <p>
+                    I aim to create jewelry that can be effortlessly lived in. I make most of my pieces
+                    using stainless steel because it is a corrosion-resistant metal that is waterproof,
+                    hypoallergenic, and will not tarnish under normal conditions. It requires less
+                    maintenance, resulting in less stress. You can shower or sweat with it on without
+                    fear of it changing color. Stainless steel is significantly harder than gold or
+                    silver and more scratch-resistant, making it perfect for everyday wear.
+                </p>
+            </section>
+
+            <section class="about-section">
+                <div class="about-section-header">
+                    <span class="about-section-tags">one-of-a-kind ✦ natural ✦ genuine</span>
+                    <h2>No Synthetics</h2>
+                </div>
+                <p>
+                    I use natural, genuine grade A-AAA gemstones in my designs because I believe
+                    nothing can compete with the radiance and authenticity of nature. Each gemstone
+                    is one-of-a-kind with its own distinct characteristics and energy, which are
+                    qualities that man-made synthetic gemstones simply cannot replicate. The subtle
+                    variations of natural gemstones add a personal touch, making each piece uniquely yours.
+                </p>
+            </section>
+
+            <section class="about-section">
+                <div class="about-section-header">
+                    <span class="about-section-tags">unique ✦ versatile ✦ illuminating</span>
+                    <h2>Design Philosophy</h2>
+                </div>
+                <p>
+                    My goal is to create high-quality jewelry that is captivating and versatile.
+                    I draw inspiration from minimalist, mystical, and soft grunge styles, blending
+                    timeless elegance with industrial edge. This fusion of contrasting elements
+                    creates depth and character that reflects the complexity of human nature while
+                    illuminating individual expression. Each piece is thoughtfully designed to embody
+                    a deeper meaning and is aimed to uplift the wearer, both inside and out.
+                </p>
+            </section>
+        </div>
+
+        <div class="about-cta">
+            <a href="index.html#shop" class="btn-secondary">Shop the Collection</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-text">Inaura</span>
+                    <p class="footer-tagline">Adorn your shadow self</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.etsy.com/shop/inaurajewelry" target="_blank" rel="noopener">Etsy Shop</a>
+                    <a href="https://instagram.com/inaurajewelry" target="_blank" rel="noopener">Instagram</a>
+                    <a href="mailto:your@email.com">Contact</a>
+                </div>
+            </div>
+            <p class="footer-copyright">&copy; 2026 Inaura Jewelry. All rights reserved.</p>
+            <p class="footer-legal">The term 'Etsy' is a trademark of Etsy, Inc. This site uses the Etsy API but is not endorsed or certified by Etsy, Inc.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/cart.js"></script>
+</body>
+</html>

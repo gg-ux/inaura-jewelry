@@ -1,0 +1,5 @@
+.DS_Store
+*.icloud
+.env
+.env.local
+node_modules/
