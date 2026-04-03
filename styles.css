@@ -165,6 +165,12 @@ a {
     opacity: 0.6;
 }
 
+.nav-links a.active {
+    opacity: 1;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
 .nav-menu-btn {
     display: none;
     background: none;
@@ -241,6 +247,11 @@ a {
 
 .mobile-menu-links a:hover {
     opacity: 0.6;
+}
+
+.mobile-menu-links a.active {
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 /* Hide on desktop */

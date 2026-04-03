@@ -25,6 +25,7 @@
                 </svg>
             </button>
             <ul class="nav-links nav-filters">
+                <li><a href="#shop" data-filter="all" class="active">All</a></li>
                 <li><a href="#shop" data-filter="necklace">Necklaces</a></li>
                 <li><a href="#shop" data-filter="earring">Earrings</a></li>
             </ul>
@@ -240,6 +241,43 @@
         // Close menu when a link is clicked
         document.querySelectorAll('.mobile-menu-links a').forEach(link => {
             link.addEventListener('click', closeMobileMenu);
+        });
+
+        // Product filtering
+        function filterProducts(filter) {
+            const cards = document.querySelectorAll('.product-card');
+
+            cards.forEach(card => {
+                const productId = card.dataset.productId.toLowerCase();
+                const isNecklace = productId.includes('necklace') || productId.includes('choker');
+                const isEarring = productId.includes('earring');
+
+                if (filter === 'all') {
+                    card.style.display = '';
+                } else if (filter === 'necklace' && isNecklace) {
+                    card.style.display = '';
+                } else if (filter === 'earring' && isEarring) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Bind filter clicks (both desktop and mobile)
+        document.querySelectorAll('[data-filter]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const filter = link.dataset.filter;
+                filterProducts(filter);
+
+                // Scroll to shop section
+                document.getElementById('shop').scrollIntoView({ behavior: 'smooth' });
+
+                // Update active state
+                document.querySelectorAll('[data-filter]').forEach(l => l.classList.remove('active'));
+                document.querySelectorAll(`[data-filter="${filter}"]`).forEach(l => l.classList.add('active'));
+            });
         });
     </script>
 </body>
