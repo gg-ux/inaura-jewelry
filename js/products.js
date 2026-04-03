@@ -140,18 +140,18 @@ function renderProducts(containerId = 'product-grid') {
         </article>
     `).join('');
 
-    // Add click handlers for quick view
+    // Add click handlers to navigate to product page
     container.querySelectorAll('.product-card').forEach(card => {
         card.addEventListener('click', (e) => {
             // Don't trigger if clicking add to cart button
             if (e.target.classList.contains('add-to-cart')) return;
 
             const productId = card.dataset.productId;
-            const product = products.find(p => p.id === productId);
-            if (product && typeof openQuickView === 'function') {
-                openQuickView(product);
-            }
+            window.location.href = `product.html?id=${productId}`;
         });
+
+        // Add cursor pointer style
+        card.style.cursor = 'pointer';
     });
 }
 

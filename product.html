@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product | Inaura Jewelry</title>
+    <meta name="description" content="Handcrafted jewelry in stainless steel and natural gemstones.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-left">
+            <ul class="nav-links">
+                <li><a href="https://www.etsy.com/shop/inaurajewelry" target="_blank" rel="noopener">Etsy</a></li>
+                <li><a href="https://instagram.com/inaurajewelry" target="_blank" rel="noopener">Instagram</a></li>
+            </ul>
+        </div>
+        <a href="index.html" class="nav-logo">
+            <span class="nav-brand-text">Inaura</span>
+            <img src="images/inaura-logo.svg" alt="" class="nav-logo-img">
+            <span class="nav-brand-text">Jewelry</span>
+        </a>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="index.html#shop">Shop</a></li>
+            </ul>
+            <button class="nav-cart" aria-label="Shopping cart">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M6 6h15l-1.5 9h-12z"/>
+                    <circle cx="9" cy="20" r="1.5"/>
+                    <circle cx="18" cy="20" r="1.5"/>
+                    <path d="M6 6L5 3H2"/>
+                </svg>
+                <span class="cart-count">0</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay"></div>
+
+    <!-- Cart Drawer -->
+    <div class="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="cart-close" aria-label="Close cart">&times;</button>
+        </div>
+
+        <div class="cart-empty">
+            <p>Your cart is empty</p>
+            <a href="index.html#shop" class="btn-secondary cart-continue">Continue Shopping</a>
+        </div>
+
+        <div class="cart-content" style="display: none;">
+            <div class="cart-items"></div>
+
+            <div class="cart-summary">
+                <div class="cart-row">
+                    <span>Subtotal</span>
+                    <span class="cart-subtotal-amount">$0.00</span>
+                </div>
+                <div class="cart-row">
+                    <span>Shipping</span>
+                    <span class="cart-shipping-amount">$5.00</span>
+                </div>
+                <div class="cart-row cart-total">
+                    <span>Total</span>
+                    <span class="cart-total-amount">$0.00</span>
+                </div>
+            </div>
+
+            <div class="cart-actions">
+                <a href="https://www.etsy.com/shop/inaurajewelry" target="_blank" rel="noopener" class="cart-checkout-btn">
+                    Checkout on Etsy
+                </a>
+                <p class="cart-checkout-note">Native checkout coming soon</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Detail -->
+    <main class="product-page">
+        <div class="product-detail">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="breadcrumb-sep">/</span>
+                <a href="index.html#shop">Shop</a>
+                <span class="breadcrumb-sep">/</span>
+                <span class="breadcrumb-current" id="breadcrumb-name">Product</span>
+            </nav>
+
+            <div class="product-detail-grid">
+                <!-- Image Gallery -->
+                <div class="product-gallery">
+                    <div class="product-main-image">
+                        <img id="main-image" src="" alt="">
+                    </div>
+                    <div class="product-thumbnails" id="thumbnails">
+                        <!-- Thumbnails rendered by JS -->
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-info-detail">
+                    <h1 class="product-title" id="product-title">Product Name</h1>
+                    <p class="product-price-detail" id="product-price">$0</p>
+
+                    <div class="product-description" id="product-description">
+                        <p>Product description here.</p>
+                    </div>
+
+                    <div class="product-features">
+                        <div class="feature">
+                            <span class="feature-icon">&#10003;</span>
+                            <span>Waterproof stainless steel</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">&#10003;</span>
+                            <span>Hypoallergenic</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">&#10003;</span>
+                            <span>Handcrafted with care</span>
+                        </div>
+                    </div>
+
+                    <div class="product-actions">
+                        <button class="add-to-cart-btn" id="add-to-cart-btn">
+                            Add to Cart
+                        </button>
+                        <a href="#" class="buy-on-etsy" id="etsy-link" target="_blank" rel="noopener">
+                            Buy on Etsy
+                        </a>
+                    </div>
+
+                    <div class="product-meta">
+                        <p class="shipping-info">Free shipping on orders over $100</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-text">Inaura</span>
+                    <p class="footer-tagline">Handcrafted with intention</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.etsy.com/shop/inaurajewelry" target="_blank" rel="noopener">Etsy Shop</a>
+                    <a href="https://instagram.com/inaurajewelry" target="_blank" rel="noopener">Instagram</a>
+                    <a href="mailto:your@email.com">Contact</a>
+                </div>
+            </div>
+            <p class="footer-copyright">&copy; 2026 Inaura Jewelry. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script>
+        // Get product ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+
+        // Find the product
+        const product = products.find(p => p.id === productId);
+
+        if (product) {
+            // Update page title
+            document.title = `${product.name} | Inaura Jewelry`;
+
+            // Update breadcrumb
+            document.getElementById('breadcrumb-name').textContent = product.name;
+
+            // Update main image
+            const mainImage = document.getElementById('main-image');
+            mainImage.src = product.image;
+            mainImage.alt = product.name;
+
+            // Update thumbnails
+            const thumbnailsContainer = document.getElementById('thumbnails');
+            thumbnailsContainer.innerHTML = product.images.map((img, index) => `
+                <button class="thumbnail ${index === 0 ? 'active' : ''}" data-image="${img}">
+                    <img src="${img}" alt="${product.name} view ${index + 1}">
+                </button>
+            `).join('');
+
+            // Thumbnail click handler
+            thumbnailsContainer.querySelectorAll('.thumbnail').forEach(thumb => {
+                thumb.addEventListener('click', () => {
+                    // Update main image
+                    mainImage.src = thumb.dataset.image;
+
+                    // Update active state
+                    thumbnailsContainer.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
+                    thumb.classList.add('active');
+                });
+            });
+
+            // Update product info
+            document.getElementById('product-title').textContent = product.name;
+            document.getElementById('product-price').textContent = `$${product.price.toFixed(0)}`;
+            document.getElementById('product-description').innerHTML = `<p>${product.description}</p>`;
+            document.getElementById('etsy-link').href = product.etsyUrl;
+
+            // Add to cart button
+            document.getElementById('add-to-cart-btn').addEventListener('click', () => {
+                if (typeof addToCart === 'function') {
+                    addToCart(product.id, product.name, product.price, product.image, product.etsyUrl);
+                }
+            });
+        } else {
+            // Product not found
+            document.querySelector('.product-detail').innerHTML = `
+                <div class="product-not-found">
+                    <h1>Product Not Found</h1>
+                    <p>Sorry, we couldn't find the product you're looking for.</p>
+                    <a href="index.html#shop" class="btn-secondary">Back to Shop</a>
+                </div>
+            `;
+        }
+
+        // Nav scroll effect
+        const nav = document.querySelector('.nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
