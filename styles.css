@@ -200,6 +200,7 @@ a {
    ======================================== */
 
 .hero-banner {
+    position: relative;
     margin-top: 60px;
     width: 100%;
     overflow: hidden;
@@ -210,6 +211,42 @@ a {
     height: auto;
     display: block;
     object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    bottom: var(--spacing-lg);
+    left: var(--spacing-lg);
+    z-index: 10;
+}
+
+.hero-tagline {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--text-primary);
+    letter-spacing: 0.02em;
+    text-transform: none;
+    margin-bottom: var(--spacing-sm);
+}
+
+.hero-cta {
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    background: var(--text-primary);
+    border: 1px solid var(--text-primary);
+    color: var(--bg-primary);
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+
+.hero-cta:hover {
+    background: transparent;
+    color: var(--text-primary);
 }
 
 .hero-cta {
