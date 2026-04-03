@@ -157,30 +157,22 @@ a {
     letter-spacing: 0.05em;
     text-transform: uppercase;
     padding: 0.4rem 0.8rem;
-    border: 1px solid var(--border);
-    margin-left: -1px;
     color: var(--text-primary);
     transition: all 0.3s ease;
 }
 
-.nav-links li:first-child a {
-    margin-left: 0;
-}
-
 .nav-links a:hover {
-    background: var(--text-primary);
-    color: var(--bg-primary);
+    opacity: 0.6;
 }
 
 .nav-cart {
     position: relative;
     background: none;
-    border: 1px solid var(--border);
+    border: none;
     cursor: pointer;
     padding: 0.4rem 0.8rem;
     color: var(--text-primary);
     transition: all 0.3s ease;
-    margin-left: -1px;
     font-family: var(--font-mono);
     font-size: 0.7rem;
     text-transform: uppercase;
@@ -191,8 +183,7 @@ a {
 }
 
 .nav-cart:hover {
-    background: var(--text-primary);
-    color: var(--bg-primary);
+    opacity: 0.6;
 }
 
 .nav-cart svg {
@@ -309,7 +300,7 @@ a {
 }
 
 .marquee-content .star {
-    font-size: 0.5rem;
+    font-size: 0.65rem;
     opacity: 0.5;
 }
 
