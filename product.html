@@ -131,7 +131,13 @@
                     </div>
 
                     <div class="product-actions">
-                        <button class="add-to-cart-btn" id="add-to-cart-btn">
+                        <button class="add-to-cart-btn"
+                            id="add-to-cart-btn"
+                            data-id=""
+                            data-name=""
+                            data-price=""
+                            data-image=""
+                            data-etsy="">
                             Add to Cart
                         </button>
                         <a href="#" class="buy-on-etsy" id="etsy-link" target="_blank" rel="noopener">
@@ -214,10 +220,24 @@
             document.getElementById('product-description').innerHTML = `<p>${product.description}</p>`;
             document.getElementById('etsy-link').href = product.etsyUrl;
 
-            // Add to cart button
-            document.getElementById('add-to-cart-btn').addEventListener('click', () => {
-                if (typeof addToCart === 'function') {
-                    addToCart(product.id, product.name, product.price, product.image, product.etsyUrl);
+            // Set up Add to Cart button with data attributes
+            const addToCartBtn = document.getElementById('add-to-cart-btn');
+            addToCartBtn.dataset.id = product.id;
+            addToCartBtn.dataset.name = product.name;
+            addToCartBtn.dataset.price = product.price;
+            addToCartBtn.dataset.image = product.image;
+            addToCartBtn.dataset.etsy = product.etsyUrl;
+
+            // Add to cart button click handler
+            addToCartBtn.addEventListener('click', () => {
+                if (window.cart) {
+                    window.cart.add({
+                        id: product.id,
+                        name: product.name,
+                        price: product.price,
+                        image: product.image,
+                        etsyUrl: product.etsyUrl
+                    });
                 }
             });
         } else {
