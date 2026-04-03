@@ -43,7 +43,6 @@ body {
     color: var(--text-primary);
     line-height: 1.5;
     overflow-x: hidden;
-    padding-bottom: 40px; /* Space for fixed marquee */
 }
 
 /* Container */
@@ -274,18 +273,17 @@ a {
 }
 
 /* ========================================
-   MARQUEE BAR - Fixed at bottom
+   MARQUEE BAR - Sticky at bottom of viewport
    ======================================== */
 
 .marquee-bar {
-    position: fixed;
+    position: sticky;
     bottom: 0;
-    left: 0;
-    right: 0;
     z-index: 90;
     overflow: hidden;
     background: var(--bg-primary);
     border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
     padding: 0.6rem 0;
 }
 
