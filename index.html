@@ -51,6 +51,18 @@
         </div>
     </nav>
 
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay"></div>
+
+    <!-- Mobile Menu Drawer -->
+    <div class="mobile-menu-drawer">
+        <ul class="mobile-menu-links">
+            <li><a href="#shop" data-filter="necklace">Necklaces</a></li>
+            <li><a href="#shop" data-filter="earring">Earrings</a></li>
+            <li><a href="#shop" data-filter="all">All Products</a></li>
+        </ul>
+    </div>
+
     <!-- Cart Overlay -->
     <div class="cart-overlay"></div>
 
@@ -205,6 +217,29 @@
             } else {
                 nav.classList.remove('scrolled');
             }
+        });
+
+        // Mobile menu toggle
+        const menuBtn = document.querySelector('.nav-menu-btn');
+        const mobileMenu = document.querySelector('.mobile-menu-drawer');
+        const mobileOverlay = document.querySelector('.mobile-menu-overlay');
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('open');
+            mobileOverlay.classList.toggle('open');
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('open');
+            mobileOverlay.classList.remove('open');
+        }
+
+        menuBtn.addEventListener('click', toggleMobileMenu);
+        mobileOverlay.addEventListener('click', closeMobileMenu);
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.mobile-menu-links a').forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
         });
     </script>
 </body>
